@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-zinc-900">
+=======
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-primary">
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +12,15 @@
     <title>{{ config('app.name', 'E-learn') }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
+=======
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
 
     <style>
@@ -19,7 +29,11 @@
 </head>
 
 <body
+<<<<<<< HEAD
     class="h-full font-sans antialiased text-gray-100 bg-zinc-900"
+=======
+    class="h-full font-sans antialiased text-primary bg-primary"
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
     x-data="{
         sidebarOpen: window.innerWidth >= 1024,
         notificationOpen: false,
@@ -27,6 +41,7 @@
         searchOpen: false,
         chatbotOpen: false,
         isMobile: window.innerWidth < 1024,
+<<<<<<< HEAD
         darkMode: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
 
         init() {
@@ -49,6 +64,10 @@
                 document.documentElement.classList.add('light');
             }
 
+=======
+
+        init() {
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
             window.addEventListener('resize', () => {
                 this.isMobile = window.innerWidth < 1024;
                 if (!this.isMobile) {
@@ -60,10 +79,13 @@
             });
         },
 
+<<<<<<< HEAD
         toggleTheme() {
             this.darkMode = !this.darkMode;
         },
 
+=======
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
         toggleSidebar() {
             this.sidebarOpen = !this.sidebarOpen;
         },
@@ -94,7 +116,11 @@
 
         toggleChatbot() {
             if (this.isMobile) {
+<<<<<<< HEAD
                 window.location.href = '{{ route("chatbot") }}';
+=======
+                window.location.href = '/chatbot';
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
             } else {
                 this.chatbotOpen = !this.chatbotOpen;
                 if (this.chatbotOpen) {
@@ -117,11 +143,15 @@
     ></div>
 
     <!-- Sidebar -->
+<<<<<<< HEAD
     @if (isset($sidebar))
         {{ $sidebar }}
     @else
         <x-layout.sidebar />
     @endif
+=======
+    <x-layout.sidebar />
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
 
     <!-- Main content -->
     <div
@@ -173,8 +203,17 @@
             trigger="notificationOpen"
             @close="notificationOpen = false"
         >
+<<<<<<< HEAD
             <div class="p-4 h-full overflow-y-auto custom-scrollbar">
                 @livewire('notifications')
+=======
+            <div class="h-full flex flex-col items-center justify-center p-6 text-center text-secondary opacity-70">
+                <div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-4">
+                    @svg('heroicon-o-bell-slash', 'w-8 h-8 text-secondary')
+                </div>
+                <h4 class="text-base font-medium text-primary">No new notifications</h4>
+                <p class="text-sm mt-1">We'll let you know when something arrives.</p>
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
             </div>
         </x-layout.right-panel>
 
@@ -198,6 +237,7 @@
             @close="chatbotOpen = false"
         >
             <div class="h-full flex flex-col items-center justify-center p-6 text-center text-secondary opacity-70">
+<<<<<<< HEAD
                 <div class="w-16 h-16 surface-muted rounded-full flex items-center justify-center mb-4">
                     @svg('heroicon-o-chat-bubble-left-right', 'w-8 h-8 text-secondary')
                 </div>
@@ -206,6 +246,13 @@
                 <a href="{{ route('chatbot') }}" class="text-sm font-medium text-accent hover:text-accent-secondary">
                     Open Full Chat
                 </a>
+=======
+                <div class="w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mb-4">
+                    @svg('heroicon-o-chat-bubble-left-right', 'w-8 h-8 text-secondary')
+                </div>
+                <h4 class="text-base font-medium text-primary">How can I help?</h4>
+                <p class="text-sm mt-1">Ask me anything about your courses or the platform.</p>
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
             </div>
         </x-layout.right-panel>
 

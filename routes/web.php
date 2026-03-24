@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+<<<<<<< HEAD
 // Auth Controllers
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -213,3 +214,8 @@ Route::prefix("admin")->name("admin.")->middleware(["auth", "role:admin"])->grou
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/activity-logs', [AdminController::class, 'activityLogs'])->name('logs');
 });
+=======
+Route::get('/', function () {
+    return view('admin.dashboard');
+});
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3

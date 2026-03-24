@@ -1,7 +1,11 @@
 @extends('layouts.auth._base-auth')
 
 @section('page-title', 'My Learning')
+<<<<<<< HEAD
 @yield('content');
+=======
+
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
 @section('sidebar')
     <x-ui.sidebar-link href="{{ route('student.dashboard') ?? '#' }}" active icon="chart-bar">Dashboard</x-ui.sidebar-link>
     <x-ui.sidebar-link href="{{ route('student.courses') ?? '#' }}" icon="book-open">My Courses</x-ui.sidebar-link>

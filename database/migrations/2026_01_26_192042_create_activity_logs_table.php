@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('activity_logs', function (Blueprint $table) {
             $table->id();
             $table->string(column: 'action');
+<<<<<<< HEAD
             $table->text(column: 'description')->nullable();
+=======
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
             $table->string(column:'actor_type')->nullable();
             $table->unsignedBigInteger(column: 'actor_id')->nullable();
             $table->string(column: 'subject_type')->nullable();

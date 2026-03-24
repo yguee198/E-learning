@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+<<<<<<< HEAD
 @source "../views/**/*.blade.php";
 @source "../js/**/*.js";
 @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
@@ -7,6 +8,16 @@
 :root {
   font-family: 'Roboto', sans-serif;
 
+=======
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+:root {
+  --font-sans: 'Comfortaa', ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
 
   --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
@@ -28,7 +39,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
+<<<<<<< HEAD
   :root:not(.light) {
+=======
+  :root {
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
     --bg-primary: #020617;
     --bg-secondary: #020617;
 
@@ -45,6 +60,7 @@
   }
 }
 
+<<<<<<< HEAD
 .dark {
   --bg-primary: #020617;
   --bg-secondary: #020617;
@@ -150,3 +166,32 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
 }
+=======
+
+@layer utilities {
+  .bg-primary { background-color: var(--bg-primary); }
+  .bg-secondary { background-color: var(--bg-secondary); }
+
+  .text-primary { color: var(--text-primary); }
+  .text-secondary { color: var(--text-secondary); }
+
+  .border-subtle { border-color: var(--border-subtle); }
+
+  .bg-accent { background-color: var(--accent-primary); }
+  .text-accent { color: var(--accent-primary); }
+
+  .bg-accent-secondary { background-color: var(--accent-secondary); }
+  .text-accent-secondary { color: var(--accent-secondary); }
+
+  .text-success { color: var(--success); }
+  .text-warning { color: var(--warning); }
+  .text-error { color: var(--error); }
+
+  .bg-success { background-color: var(--success); }
+  .bg-warning { background-color: var(--warning); }
+  .bg-error { background-color: var(--error); }
+
+  .surface-card { background-color: var(--surface-card); }
+  .surface-muted { background-color: var(--surface-muted); }
+}
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3

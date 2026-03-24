@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('layouts.app')
 
 @section('content')
@@ -43,3 +44,14 @@
     </div>
 </div>
 @endsection
+=======
+@extends('layouts.admin')
+
+@section('content')
+
+<div class="py-6 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1>Welcome to the Admin Dashboard</h1>
+</div>
+
+@endsection
+>>>>>>> 3863a09b394c58216ab17e6ce1358e41955aa5e3
